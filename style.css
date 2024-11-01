@@ -10,80 +10,66 @@ body {
     color: #333;
     line-height: 1.6;
     background: #f4f6f8;
+    overflow-x: hidden;
 }
 
+/* Header and Animated Logo */
 header {
     background: #333;
     color: #fff;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     padding: 2em;
+    text-align: center;
 }
 
-header .intro h1 {
+.logo h1 {
     font-size: 3em;
-    margin-bottom: 0.5em;
+    margin: 0;
+    display: inline-block;
+    animation: colorChange 4s linear infinite;
 }
 
-header .intro p {
+.logo h1 span {
+    color: #00bcd4;
+}
+
+.logo p {
     font-size: 1.2em;
-    margin-bottom: 1.5em;
+    margin-top: 0.5em;
+    font-weight: 300;
+    opacity: 0.8;
 }
 
-.cta-btn {
-    color: #fff;
-    background: #00bcd4;
-    padding: 0.8em 1.5em;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.cta-btn:hover {
-    background: #008c9e;
+/* Logo Animation */
+@keyframes colorChange {
+    0%, 100% { color: #00bcd4; }
+    50% { color: #fff; }
 }
 
 /* Navigation */
-nav {
-    background: #f4f6f8;
-    padding: 1em;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 1.5em;
+    margin-top: 1em;
 }
 
 nav ul li a {
-    color: #333;
+    color: #00bcd4;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #00bcd4;
+    color: #fff;
 }
 
 /* Content Sections */
 .content-section {
-    padding: 4em 0;
+    padding: 5em 0;
     text-align: center;
-    background: #fff;
-}
-
-.content-section:nth-child(even) {
-    background: #f9f9f9;
+    transition: background-color 0.3s ease;
 }
 
 h2 {
@@ -92,17 +78,28 @@ h2 {
     margin-bottom: 1em;
 }
 
-.skills-list {
-    list-style: none;
-    padding: 0;
+/* Skills and Projects Cards */
+.skills-list, .project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 2em;
 }
 
-.skills-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    font-size: 1.2em;
-    padding: 0.5em 0;
+.skills-list li, .project {
+    background: #fff;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.skills-list li i, .project h3 i {
+    color: #00bcd4;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
 }
 
 footer {
