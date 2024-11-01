@@ -11,12 +11,12 @@ body {
     color: #333;
 }
 
-/* Navigation */
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     padding: 1em 0;
     text-align: center;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
@@ -41,13 +41,13 @@ body {
     color: #00bcd4;
 }
 
-/* Hero Section */
+/* Hero Section with Background Image */
 header {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('https://images.unsplash.com/photo-1537432376769-00aeb52a4ae2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGNvZGluZyUyMHNwYWNlfGVufDB8fHx8MTY5MzgzMTg2Ng&ixlib=rb-1.2.1&q=80&w=1920')
+    background: url('https://images.unsplash.com/photo-1537432376769-00aeb52a4ae2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGNvZGluZyUyMHNwYWNlfGVufDB8fHx8MTY5MzgzMTg2Ng&ixlib=rb-1.2.1&q=80&w=1920') 
     no-repeat center center/cover;
     color: #fff;
     text-align: center;
@@ -93,7 +93,7 @@ header::before {
     background: #008c9e;
 }
 
-/* Content Sections */
+/* Section Styling */
 .content-section {
     padding: 5em 0;
     text-align: center;
