@@ -7,69 +7,73 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: #333;
-    line-height: 1.6;
     background: #f4f6f8;
+    color: #333;
     overflow-x: hidden;
 }
 
-/* Header and Animated Logo */
+/* Side Navigation */
+.side-nav {
+    position: fixed;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.side-nav ul {
+    list-style: none;
+}
+
+.side-nav ul li a {
+    display: block;
+    margin: 1em 0;
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.side-nav ul li a:hover {
+    color: #555;
+}
+
+/* Hero Section with Animated Logo */
 header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #333;
     color: #fff;
-    padding: 2em;
     text-align: center;
 }
 
-.logo h1 {
-    font-size: 3em;
-    margin: 0;
-    display: inline-block;
-    animation: colorChange 4s linear infinite;
+.animated-logo {
+    font-size: 4em;
+    color: #fff;
+    animation: colorShift 5s infinite;
 }
 
-.logo h1 span {
-    color: #00bcd4;
-}
-
-.logo p {
-    font-size: 1.2em;
-    margin-top: 0.5em;
-    font-weight: 300;
-    opacity: 0.8;
-}
-
-/* Logo Animation */
-@keyframes colorChange {
+@keyframes colorShift {
     0%, 100% { color: #00bcd4; }
     50% { color: #fff; }
 }
 
-/* Navigation */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1.5em;
-    margin-top: 1em;
-}
-
-nav ul li a {
-    color: #00bcd4;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #fff;
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.8;
 }
 
 /* Content Sections */
 .content-section {
-    padding: 5em 0;
+    padding: 6em 0;
     text-align: center;
-    transition: background-color 0.3s ease;
+    background: #fff;
+}
+
+.content-section:nth-child(even) {
+    background: #f9f9f9;
 }
 
 h2 {
@@ -78,8 +82,8 @@ h2 {
     margin-bottom: 1em;
 }
 
-/* Skills and Projects Cards */
-.skills-list, .project {
+/* Card Styling for Skills and Projects */
+.card-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -87,24 +91,31 @@ h2 {
     margin-top: 2em;
 }
 
-.skills-list li, .project {
+.card {
     background: #fff;
     padding: 1.5em;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
-    width: 200px;
 }
 
-.skills-list li i, .project h3 i {
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card i, .card h3 {
     color: #00bcd4;
-    font-size: 1.5em;
     margin-bottom: 0.5em;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 1em;
     background: #333;
     color: #fff;
+    font-size: 0.9em;
 }
