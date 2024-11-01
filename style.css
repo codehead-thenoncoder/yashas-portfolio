@@ -1,0 +1,113 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f4f6f8;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2em;
+}
+
+header .intro h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+header .intro p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.cta-btn {
+    color: #fff;
+    background: #00bcd4;
+    padding: 0.8em 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-btn:hover {
+    background: #008c9e;
+}
+
+/* Navigation */
+nav {
+    background: #f4f6f8;
+    padding: 1em;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 4em 0;
+    text-align: center;
+    background: #fff;
+}
+
+.content-section:nth-child(even) {
+    background: #f9f9f9;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #00bcd4;
+    margin-bottom: 1em;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.2em;
+    padding: 0.5em 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background: #333;
+    color: #fff;
+}
