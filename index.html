@@ -5,56 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yashas T | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Animated Logo -->
+    <!-- Fixed Side Navigation -->
+    <nav class="side-nav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Animated Logo -->
     <header id="header">
-        <div class="logo">
-            <h1><span>Y</span>ashas <span>T</span></h1>
-            <p>Front-End Developer</p>
+        <div class="hero-content">
+            <h1 class="animated-logo">Yashas <span class="highlight">T</span></h1>
+            <p class="subtitle">Front-End Developer</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- About Section -->
     <section id="about" class="content-section">
         <h2>About Me</h2>
-        <p>I'm Yashas, a front-end developer experienced in creating visually stunning and user-friendly websites.</p>
+        <p>I'm Yashas, a front-end developer experienced in building engaging and visually stunning web interfaces.</p>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="content-section">
         <h2>Skills</h2>
-        <ul class="skills-list">
-            <li><i class="fas fa-code"></i> HTML, CSS, JavaScript</li>
-            <li><i class="fab fa-java"></i> Core & Advanced Java</li>
-            <li><i class="fas fa-cloud"></i> AWS, SQL, Networking</li>
-        </ul>
+        <div class="card-list">
+            <div class="card"><i class="fas fa-code"></i> HTML, CSS, JavaScript</div>
+            <div class="card"><i class="fab fa-java"></i> Core & Advanced Java</div>
+            <div class="card"><i class="fas fa-cloud"></i> AWS, SQL, Networking</div>
+        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="content-section">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1: RTO DL Management System</h3>
-            <p>An online system to manage RTO functions developed using JavaScript, PHP, and SQL.</p>
-        </div>
-        <div class="project">
-            <h3>Project 2: Online Loan Approval System</h3>
-            <p>A platform for loan approvals using Angular, SQL, and PHP.</p>
-        </div>
-        <div class="project">
-            <h3>Project 3: Code Collaboration Platform</h3>
-            <p>A tool for real-time code collaboration and editing, using HTML, CSS, and JavaScript.</p>
+        <div class="card-list">
+            <div class="card"><h3>RTO DL Management System</h3><p>Online RTO management using JavaScript, PHP, SQL.</p></div>
+            <div class="card"><h3>Online Loan Approval System</h3><p>Loan management and approval platform built with Angular and SQL.</p></div>
+            <div class="card"><h3>Code Collaboration Platform</h3><p>Real-time code collaboration tool with HTML, CSS, and JavaScript.</p></div>
         </div>
     </section>
 
