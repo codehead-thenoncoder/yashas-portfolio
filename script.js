@@ -8,23 +8,25 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
     });
 });
 
-// Custom Cursor
-const cursor = document.createElement('div');
-cursor.classList.add('custom-cursor');
-document.body.appendChild(cursor);
+// Welcome Animation Control
+window.addEventListener('load', () => {
+    const overlay = document.getElementById('welcome-overlay');
+    const heroContent = document.querySelector('.hero-content');
 
-document.addEventListener('mousemove', (e) => {
-    cursor.style.left = `${e.clientX}px`;
-    cursor.style.top = `${e.clientY}px`;
-});
+    setTimeout(() => {
+        overlay.classList.add('fade-out'); // Fades out the welcome overlay
+        heroContent.classList.add('visible'); // Fades in hero content
 
-document.querySelectorAll('a, button').forEach(item => {
-    item.addEventListener('mouseenter', () => {
-        cursor.style.width = '40px';
-        cursor.style.height = '40px';
-    });
-    item.addEventListener('mouseleave', () => {
-        cursor.style.width = '20px';
-        cursor.style.height = '20px';
-    });
+        // Make each section visible on scroll
+        const sections = document.querySelectorAll('.content-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => observer.observe(section));
+    }, 3000); // 3 seconds for initials animation to complete
 });
