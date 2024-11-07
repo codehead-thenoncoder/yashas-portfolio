@@ -20,32 +20,33 @@
     font-weight: bold;
     display: flex;
     gap: 1em;
+    position: relative;
 }
 
 .initial-part {
-    position: absolute;
     opacity: 0;
-    animation: floatIn 1.5s ease forwards;
+    position: absolute;
+    animation: mergeIn 1.5s ease forwards;
 }
 
-#top-left { top: -100px; left: -100px; }
-#top-right { top: -100px; right: -100px; }
-#bottom-left { bottom: -100px; left: -100px; }
-#bottom-right { bottom: -100px; right: -100px; }
+#initial-T {
+    left: -100px;
+    animation-delay: 0.2s;
+}
 
-@keyframes floatIn {
+#initial-Y {
+    right: -100px;
+    animation-delay: 0.4s;
+}
+
+@keyframes mergeIn {
     100% {
-        transform: translate(0, 0);
+        transform: translateX(0);
         opacity: 1;
     }
 }
 
-#top-left { animation-delay: 0.2s; }
-#top-right { animation-delay: 0.4s; }
-#bottom-left { animation-delay: 0.6s; }
-#bottom-right { animation-delay: 0.8s; }
-
-/* Overlay fade-out */
+/* Overlay Fade Out */
 .fade-out {
     opacity: 0;
     pointer-events: none;
