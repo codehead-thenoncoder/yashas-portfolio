@@ -13,7 +13,6 @@ window.addEventListener('load', () => {
     const overlay = document.getElementById('welcome-overlay');
     const heroContent = document.querySelector('.hero-content');
 
-    // Start welcome animation, then fade out overlay and show hero content
     setTimeout(() => {
         overlay.classList.add('fade-out');
         heroContent.classList.add('visible');
@@ -29,5 +28,5 @@ window.addEventListener('load', () => {
         }, { threshold: 0.1 });
 
         sections.forEach(section => observer.observe(section));
-    }, 3000); // Overlay fade-out delay to ensure initials animation completes
+    }, 4000); // Overlay fade-out delay for full icon animation
 });
