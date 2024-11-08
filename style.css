@@ -1,88 +1,91 @@
-/* Overlay Styling */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url('your-background-image.jpg'); /* Set your background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* Section Styles */
+section {
+  padding: 80px 10%;
+  margin-top: 80px;
+}
+
+h1, h2, h3 {
+  color: #f39c12;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
     opacity: 1;
-    transition: opacity 1s ease;
+  }
 }
-
-.logo-container {
-    position: relative;
-    width: 150px;
-    height: 150px;
-}
-
-.line-segment {
-    position: absolute;
-    background: #00bcd4;
-    width: 2px;
-    height: 50px;
-    opacity: 0;
-    animation: moveIn 2s ease forwards, blink 0.5s 3 ease 2s;
-}
-
-/* Line Segment Positions */
-#segment-T1 { top: 0; left: 50%; transform: translate(-50%, -100px); }
-#segment-T2 { left: 0; top: 50%; transform: translate(-100px, -50%); }
-#segment-Y1 { top: 100%; left: 50%; transform: translate(-50%, 100px); }
-#segment-Y2 { right: 0; top: 50%; transform: translate(100px, -50%); }
-
-/* Line Movement and Blink Effect */
-@keyframes moveIn {
-    100% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-/* Overlay Fade Out */
-.fade-out {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* Main Content Fade-In */
-.hero-content, .content-section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.hero-content.visible, .content-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Button Styling */
-.cta-btn {
-    background: #00bcd4;
-    color: #fff;
-    padding: 0.8em 1.5em;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.cta-btn:hover {
-    background: #008c9e;
-    transform: scale(1.05);
-}
-
-/* Section Backgrounds */
-#about { background: linear-gradient(to right, #333, #555); color: #fff; }
-#skills { background: #f4f6f8; }
-#experience { background: linear-gradient(to right, #333, #444); color: #fff; }
-#projects { background: #f4f6f8; }
